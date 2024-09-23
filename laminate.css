@@ -1,0 +1,364 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: #e5cea7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* display: flex;
+    align-items: stretch;
+    height: 100vh; */
+}
+
+
+/* NAVBAR */
+nav{
+    background-color: 	#e5cea7;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    position:fixed;
+    top:0;
+    width: 100%;
+    z-index:100;
+}
+nav ul{
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+}
+nav li{
+    height: 70px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:	#56301d;
+    border-radius: 10px;
+}
+.vlinks:hover{
+    background-color: #b7986f;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+#logo{
+    height: 100%;
+}
+#menu{
+    display: none;
+}
+/* sidebar */
+.sidebar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:  #e5cea76e;
+    backdrop-filter: blur(15px);
+    box-shadow: -10 0 10 rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width:100%;
+}
+.sidebar a{
+    width:100%;
+}
+.sidebar a:hover{
+    background-color: #b7986f;
+}
+.contact{
+    display: flex;
+    width: 20%;
+    height: 50px;
+}
+/* RESPONSIVE */
+@media(max-width:850px)
+{
+    .hideOnMobile{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+}
+@media(max-width:450px)
+{
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+/*content*/
+
+.default-info{
+    font-weight: 600;
+    width: 100vw;
+    text-align: center;
+}
+.matter{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#side {
+    width: 15%;
+    padding-top: 20px;
+    overflow-y: auto; /* Enable scrollbar if content overflows */
+    margin-top: 10px;
+    height: 100vh;
+}
+
+#content {
+    width: 85%;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.list-item {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.button {
+    background-color: #e5cea7;
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.button:hover {
+    background-color:#b7986f
+}
+
+.content-section {
+    display: none;
+    padding-left: 50px;
+}
+.pdf {
+    width: 100%;
+    aspect-ratio: 5 / 2.5;
+}
+@media(max-width: 1024px) {
+    .matter{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    #side{
+        width: 100vw;
+        height: fit-content;
+    }
+    .list-item {
+        display: inline;
+    }
+    #content {
+        width: 100vw;
+        margin-top: 20px;
+        height: fit-content;
+        padding-left: 20px;
+    }
+    .button{
+        width: 150px;
+    }
+    #list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pdf{
+        aspect-ratio: 3 / 3;
+        padding-right: 20px;
+    }
+}
+
+
+@media(max-width: 450px) {
+    .matter{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    #side{
+        width: 100vw;
+        height: fit-content;
+    }
+    .list-item {
+        display: inline;
+    }
+    #content {
+        width: 100vw;
+        margin-top: 5px;
+        height: fit-content;
+        padding-left: 10px;
+        padding-top: 0;
+    }
+    .button{
+        width: 100px;
+        font-size: smaller;
+    }
+    #list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pdf{
+        aspect-ratio: 3 / 5;
+        padding-right: 20px;
+    }
+
+}
+
+
+
+
+
+/* FOOTER */
+
+.footer{
+	background-color: #e5cea7;
+    padding: 20px 0 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+.container{
+	max-width: 100%;
+}
+.row{
+	display: flex;
+    align-items: top;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+ul{
+	list-style: none;
+}
+.footer-col{
+   width: 20%;
+   margin-left: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #56301d;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	font-weight: 700;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #56301d;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	color: #56301d;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 20px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #56301d;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.qr img{
+    height: 120px;
+}
+hr{
+    color:red;
+    border-color: #24262b;
+    border-width: 1px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#foot_logo{
+    height: 140px;
+    width: 170px;
+    margin-bottom: 15px;
+}
+.text{
+    text-align: center;
+}
+
+/*responsive*/
+@media(max-width: 950px){
+  .footer-col{
+    margin-left: 80px;
+    width: 22%;
+}
+}
+@media(max-width: 870px){
+  .row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-col{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    
+  }
+  #foot_logo{
+    display: none;
+  }
+  .social-links{
+    align-self: center;
+  }
+}
